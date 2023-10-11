@@ -21,10 +21,9 @@ Please note this script will not support for the versions of 8.x or above.
 ## Run the Script:
 
 ```bash
-Copy code
 ./siem_setup_script.sh
 ```
-## Follow the Prompts:
+##Follow the Prompts:
 The script will prompt you for necessary information and guide you through the setup process.
 
 ## Success Message:
