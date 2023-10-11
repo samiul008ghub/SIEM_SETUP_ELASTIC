@@ -21,6 +21,7 @@ Please note this script will not support for the versions of 8.x or above.
 ## Run the Script:
 
 ```bash
+chmod u+x siem_setup_script.sh
 ./siem_setup_script.sh
 ```
 ## Follow the Prompts:
