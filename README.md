@@ -35,3 +35,8 @@ The script assumes a clean environment with no existing Elasticsearch, Kibana, o
 
 ## Notes
 Please review and customize the script based on your specific requirements.
+
+
+ 
+ 
+
