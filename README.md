@@ -17,3 +17,23 @@ Please note this script will not support for the versions of 8.x or above.
    ```bash
    git clone https://github.com/samiul008ghub/SIEM_SETUP_ELASTIC.git
    cd SIEM_SETUP_ELASTIC
+   ```
+## Run the Script:
+
+```bash
+Copy code
+./siem_setup_script.sh
+```
+## Follow the Prompts:
+The script will prompt you for necessary information and guide you through the setup process.
+
+## Success Message:
+Upon successful completion, the script will display a success message.
+
+## Prerequisites
+The script assumes a clean environment with no existing Elasticsearch, Kibana, or Filebeat installations.
+
+## Notes
+Please review and customize the script based on your specific requirements.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
