@@ -30,9 +30,7 @@ The script will prompt you for necessary information and guide you through the s
 Upon successful completion, the script will display a success message.
 
 ## Prerequisites
-The script assumes a clean environment with no existing Elasticsearch, Kibana, or Filebeat installations.
+The script assumes a clean environment with no existing Elasticsearch, Kibana, or Filebeat installations. However, it checks for any existing installation and prompts for removal.
 
 ## Notes
 Please review and customize the script based on your specific requirements.
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
