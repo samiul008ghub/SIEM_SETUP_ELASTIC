@@ -35,6 +35,8 @@ The script assumes a clean environment with no existing Elasticsearch, Kibana, o
 
 ## Notes
 Please review and customize the script based on your specific requirements.
+Once the installation process is finished, you need to check individually if the services are running properly.
+For a graphical overview to checking the status and visualizing the logs please feel free to checkup my blog post  
 
 
  
