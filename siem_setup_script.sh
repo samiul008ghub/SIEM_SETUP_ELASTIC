@@ -61,6 +61,19 @@ remove_existing_installations() {
 # Function to install Elasticsearch, Kibana, and Filebeat
 install_elk_versions() {
   log "${YELLOW}Installing Elasticsearch, Kibana, and Filebeat...${NC}"
+
+  
+  # Check if the Elastic repository is already added
+  if ! grep -q "https://artifacts.elastic.co/packages/7.x/apt" /etc/apt/sources.list.d/elastic-7.x.list; then
+    log "Adding the Elastic repository..."
+    # Install the GPG key
+    curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/elasticsearch.gpg --import && chmod 644 /usr/share/keyrings/elasticsearch.gpg
+    # Add the repository
+    echo "deb [signed-by=/usr/share/keyrings/elasticsearch.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
+    # Update the package information
+    apt-get update || handle_error "Failed to update package information"
+  fi
+  
   read -p "Enter Elasticsearch version (e.g., 7.17.11): " es_version
   read -p "Enter Kibana version (e.g., 7.17.11): " kibana_version
   read -p "Enter Filebeat version (e.g., 7.17.11): " filebeat_version
